@@ -6,7 +6,7 @@
 */
 
 
-//FUNCTION INC ONVERTING WORDS TO NUMBER
+//FUNCTION IN CONVERTING WORDS TO NUMBER
 function convertWordsToNum(words){
 	var value = {									//values
 			"one": 1,
@@ -65,3 +65,15 @@ function convertWordsToNum(words){
 	return(convertedNum);							//returns the final answer			
 }
 
+//FUNCTION IN CONVERTING WORDS TO CURRENCY
+function convertWordsToCurrency(words,currency){
+	var ans;
+	var validCurrency = ["JPY", "PHP", "USD"];			// valid currencies
+	var num = convertWordsToNum(words);				// convert the words to numbers using the previous function (convertWordsToNum())
+	var check = validCurrency.indexOf(currency)			// checks if currency is valid
+	if(check!=-1){										//If currency is valid
+		ans = currency + num;							// append currency
+		return (ans);						
+	}
+
+}
